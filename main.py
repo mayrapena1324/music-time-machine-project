@@ -29,10 +29,6 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
                                                redirect_uri=REDIRECT_URI,
                                                scope="playlist-modify-private"))
 
-# results = sp.current_user_saved_tracks()
-# for idx, item in enumerate(results['items']):
-#     track = item['track']
-#     print(idx, track['artists'][0]['name'], " – ", track['name'])
 
 id = sp.current_user()["id"]
 
